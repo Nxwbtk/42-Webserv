@@ -10,12 +10,8 @@
    - Handle data transmission between server and clients.
 
 2. **Develop I/O Multiplexing:**
-   - Implement `select()` or equivalent for multiple connection handling.
+   - Implement `epoll()` for multiplexing.
    - Ensure non-blocking and efficient data handling.
-
-3. **Testing and Debugging:**
-   - Conduct thorough testing for server core functionalities.
-   - Debug networking and I/O related issues.
 
 #### Deliverable:
 - A functional Server Core capable of handling multiple connections.
@@ -27,7 +23,7 @@
 
 #### Tasks:
 1. **Develop Request Parser:**
-   - Build HttpRequest class for HTTP request parsing.
+   - Build HttpHandler class for HTTP request parsing.
    - Manage parsing of request components (method, path, headers, body).
    - Handle parsing errors and incomplete requests.
 
@@ -35,10 +31,6 @@
    - Create Response class for HTTP response construction.
    - Manage status line, headers, and message body in responses.
    - Ensure appropriate response generation based on request analysis.
-
-3. **Unit Testing:**
-   - Develop unit tests for request parsing and response construction.
-   - Validate parsing and response accuracy for various HTTP requests.
 
 #### Deliverable:
 - A fully operational Request Parser and Response Builder.
@@ -58,10 +50,6 @@
    - Implement CGI functionality for executing external scripts.
    - Establish data transfer mechanism between server and CGI scripts.
    - Handle diverse script types (Python, Bash, etc.).
-
-3. **Testing and Integration:**
-   - Test server behavior with varying configuration settings.
-   - Ensure correct execution and output of CGI scripts.
 
 #### Deliverables:
 - A mechanism for handling configuration files.
