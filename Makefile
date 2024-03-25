@@ -17,6 +17,7 @@ NC		= \033[0m
 # ***** COMPILATION **** #
 CXX = c++ -g3
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+INC = -I./inc
 RM = rm -rf
 
 # ***** HEADERS ******** #
@@ -45,7 +46,7 @@ all: $(OBJ_DIR) $(NAME)
 	@mkdir -p $(OBJ_DIR)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp $(HDR)
-	@echo "$(MAGENTA) $(CXX) $(CXXFLAGS) $(HDR) -c $< -o $@ $(NC)"
+	@echo "$(MAGENTA) $(CXX) $(CXXFLAGS) -c $< -o $@ $(NC)"
 	@$(CXX) $(CXXFLAGS) $(INC) -c $< -o $@
 
 $(NAME): $(OBJS)
