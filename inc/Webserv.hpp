@@ -19,7 +19,7 @@
 # include "ConfigParser.hpp"
 # include "Helpers.hpp"
 # include "HttpHandler.hpp"
-# include "Server.hpp"
+# include "./Server.hpp"
 
 /* C++ LIBRARY */
 # include <iostream>
@@ -44,6 +44,8 @@
 # include <netdb.h>
 # include <sys/epoll.h>
 
+class Server;
+class HttpHandler;
 
 class Webserv {
 	public:
