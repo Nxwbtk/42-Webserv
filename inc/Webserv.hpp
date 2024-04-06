@@ -28,6 +28,7 @@
 # include <map>
 # include <csignal>
 # include <ctime>
+# include <cstdlib>
 # include <exception>
 
 /* C LIBRARY */
@@ -46,6 +47,7 @@
 
 class Server;
 class HttpHandler;
+class ConfigParser;
 
 class Webserv {
 	public:
