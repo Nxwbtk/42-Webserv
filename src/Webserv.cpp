@@ -50,7 +50,7 @@ void Webserv::loadConfiguration(const std::string& filename) {
 /* Set up server sockets according to the loaded configuration */
 void Webserv::setUpServerSockets() {
 	std::cout << CYAN "Setting up server sockets..." << NC << std::endl;
-	
+
 	std::vector<Server>::iterator it = _servers.begin();
 
 	for (; it != _servers.end(); ++it) {

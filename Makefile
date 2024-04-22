@@ -29,7 +29,7 @@ SRC = main.cpp \
 		ConfigParser.cpp \
 		Helpers.cpp \
 		HttpHandler.cpp \
-		Webserv.cpp \
+		Server.cpp \
 
 SRCS = $(addprefix $(SRC_DIR), $(SRC))
 
