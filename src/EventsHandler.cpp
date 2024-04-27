@@ -8,7 +8,7 @@ int Webserv::runEventLoop() {
 		std::cerr << RED "Error: epoll_create() failed." NC << std::endl;
 		throw -1;
 	}
-	
+
 	// Add listener sockets to epoll list
 	struct epoll_event ev;
 	std::set<int>::iterator it;
@@ -53,7 +53,7 @@ int Webserv::runEventLoop() {
 
 void Webserv::processEvent(struct epoll_event& event) {
 	HttpHandler* context = NULL;
-	
+
 	if (_contexts.find(event.data.fd) != _contexts.end())
 		context = _contexts[event.data.fd];
 
@@ -74,7 +74,7 @@ void Webserv::handleIncomingEvent(struct epoll_event& event, HttpHandler* contex
 		struct sockaddr_in clientAddr;
 		socklen_t clientAddrLen = sizeof(clientAddr);
 		int connFd = accept(event.data.fd, (struct sockaddr*)&clientAddr, &clientAddrLen);
-		
+
 		if (connFd == -1) {
 			std::cerr << "Error: Failed to accept new connection." << std::endl;
 			return;
